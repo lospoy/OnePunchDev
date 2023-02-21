@@ -13,10 +13,32 @@ import (
 	"gorm.io/gorm"
 )
 
+type Timespan struct {
+	Start			int64		`json:"start"`
+	End				int64		`json:"end"`
+	Duration	int64		`json:"duration"`
+}
+
+type Code struct {
+	Time			Timespan	`json:"timespan"`
+}
+
+// type Workout struct {
+// 	Time			[]Timespan	`json:"timespan"`
+// 	Squats		uint				`json:"squats"`
+// 	Pushups		uint				`json:"pushups"`
+// 	Core			uint				`json:"core"`
+// }
+
+// type Rest struct {
+// 	Time			[]Timespan	`json:"timespan"`
+// }
+
 type Session struct {
-	Code			string		`json:"code"`
-	Workout		string		`json:"workout"`
-	Rest			string		`json:"rest"`
+	ID				int			`json:"id"`
+	Code			Code		`json:"code"`
+	// Workout		[]Workout	`json:"workout"`
+	// Rest			[]Rest		`json:"rest"`
 }
 
 // talks to the database
@@ -126,9 +148,9 @@ func (r *Repository) GetSessionByID(context *fiber.Ctx) error {
 // ROUTES
 func(r *Repository) SetupRoutes(app *fiber.App) {
 	api := app.Group("/api")
-	api.Post("/create_session", r.CreateSession)
-	api.Delete("/delete_session/:id", r.DeleteSession)
-	api.Get("/get_session/:id", r.GetSessionByID)
+	api.Post("/session/new", r.CreateSession)
+	api.Delete("/session/delete/:id", r.DeleteSession)
+	api.Get("/session/:id", r.GetSessionByID)
 	api.Get("/sessions", r.GetAllSessions)
 }
 
