@@ -14,13 +14,21 @@ import (
 )
 
 type Timespan struct {
-	Start			int64		`json:"start"`
-	End				int64		`json:"end"`
-	Duration	int64		`json:"duration"`
+	gorm.Model
+	ID					int
+	Start				int64
+	End					int64
+	Duration		int64
+	CodeID			int
+	Code				Code
 }
 
 type Code struct {
-	Time			Timespan	`json:"timespan"`
+	gorm.Model
+	ID					int
+	SessionID		int
+	Session			Session
+	Times				[]Timespan
 }
 
 // type Workout struct {
@@ -35,8 +43,9 @@ type Code struct {
 // }
 
 type Session struct {
+	gorm.Model
 	ID				int			`json:"id"`
-	Code			Code		`json:"code"`
+	Code			[]Code		`json:"code"`
 	// Workout		[]Workout	`json:"workout"`
 	// Rest			[]Rest		`json:"rest"`
 }
