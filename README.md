@@ -13,4 +13,8 @@ Productivity app for habit reinforcement. Choose how often you want to take a br
 
 > _In an alternate universe, Saitama gets swole in between his programming breaks._
 
-🛠️ In development
+## 🛠️ In development
+#### Backend
+✅ API basic functionality
+<br>
+⬜ Storage interface
