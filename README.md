@@ -17,4 +17,6 @@ Productivity app for habit reinforcement. Choose how often you want to take a br
 #### Backend
 ✅ API basic functionality
 <br>
-⬜ Storage interface
+✅ Storage interface
+<br>
+⬜ JWT Authentication
