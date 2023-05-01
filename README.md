@@ -15,8 +15,11 @@ Productivity app for habit reinforcement. Choose how often you want to take a br
 
 ## 🛠️ In development
 #### Backend
-✅ API basic functionality
+✅ API
 <br>
-✅ Storage interface
+✅ PostgreSQL models
 <br>
-⬜ JWT Authentication
+✅ JWT Authentication + Password validation
+
+#### Frontend
+⬜ Login
