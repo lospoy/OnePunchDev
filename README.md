@@ -22,4 +22,4 @@ Productivity app for habit reinforcement. Choose how often you want to take a br
 ✅ JWT Authentication + Password validation
 
 #### Frontend
-⬜ Login
+<a href="https://github.com/lospoy/OnePunchDev-frontend">OnePunchDev frontend repo</a>
