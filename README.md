@@ -7,6 +7,7 @@
   <img alt="Go" src="https://img.shields.io/badge/-Go-6ad7e5?style=for-the-badge&logo=go&logoColor=black" />
   <img alt="React" src="https://img.shields.io/badge/-React-0088CC?style=for-the-badge&logo=react&logoColor=white" />
   <img alt="TypeScript" src="https://img.shields.io/badge/-TypeScript-2875c3?style=for-the-badge&logo=typescript&logoColor=white" />
+  <img alt="Tailwind" src="https://img.shields.io/badge/-Tailwind-499fc4?style=for-the-badge&logo=tailwindcss&logoColor=white" />
 </p>
 
 Productivity app for habit reinforcement. Choose how often you want to take a break and the app will give you a short workout to do at random.
